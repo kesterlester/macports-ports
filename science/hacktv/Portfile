@@ -1,0 +1,26 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+
+PortGroup           github 1.0
+
+github.setup        kesterlester hacktv 0.0.4 v
+github.tarball_from releases
+
+categories          science
+platforms           darwin
+license             GPL-3+
+maintainers         kesterlester
+description         Broadcast TV using an SDR like HackRF One
+long_description    Broadcast TV using a Software Defined Radio like HackRF One
+homepage            https://github.com/kesterlester/hacktv
+
+checksums           sha256  f797b1030852a386b60d673ee237f438c0825697ad553cdd08ac5efae221ea0b \
+                    rmd160  ed5feeebba9de4ecf1acbeab2429c13e53a74821 \
+                    size    255816
+
+depends_lib         port:ffmpeg-devel \
+                    port:SoapySDR \
+                    port:hackrf
+
+use_configure       no
